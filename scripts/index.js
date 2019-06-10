@@ -1,5 +1,6 @@
 'use strict';
 /* global shoppingList */
+/*eslint-env jquery*/
 
 // eslint-disable-next-line no-unused-vars
 
