@@ -1,5 +1,5 @@
 'use strict';
-/* global cuid, Item  */
+/* global cuid, Item, render  */
 
 // eslint-disable-next-line no-unused-vars
 const store = (function() {
@@ -13,20 +13,21 @@ const store = (function() {
   let searchTerm = '';
 
   const findById = function(id) {
-    store.items.find(items => items.id === id);
+    return store.items.find(items => items.id === id);
   };
 
   const addItem = function(name) {
     try {
       Item.validateName(name);
       this.items.push(Item.create(name));
+      render();
     } catch(error) {
       console.log('Cannot add item' + error.message);
     }
   };
 
   const findAndToggleChecked = function(id) {
-    const foundItem = this.findById(id);
+    const foundItem = findById(id);
     foundItem.checked = !foundItem.checked;
   };
 
