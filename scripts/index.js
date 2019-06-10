@@ -9,6 +9,8 @@ function main() {
   shoppingList.render();
 }
 console.log(store);
+
+console.log(Item);
 console.log(foo);
 
 $(main);

@@ -1,9 +1,8 @@
 'use strict';
 /* global cuid  */
-// eslint-disable-next-line no-unused-vars
 
+// eslint-disable-next-line no-unused-vars
 const store = (function() {
-  const foo = 'bar';
   let items = [
     { id: cuid(), name: 'apples', checked: false },
     { id: cuid(), name: 'oranges', checked: false },
